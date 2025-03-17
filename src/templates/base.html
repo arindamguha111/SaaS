@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ my_title }}</title>
+    <title>{% block title %}{{ title }}{% endblock title %}</title>
 </head>
 <body>
-    <h1>Welcome to Django!!</h1>
+    {% block content %}
+    <h1>{{ message }}</h1>
+    {% endblock content %}
+    
 </body>
 </html>
